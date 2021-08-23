@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoldBadgeChallenge_1_Console", "GoldBadgeChallenge\GoldBadgeChallenge_1_Console.csproj", "{737A3865-94B3-41FC-95BB-1C6D3664BB21}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge 1 Console", "GoldBadgeChallenge\Challenge 1 Console.csproj", "{737A3865-94B3-41FC-95BB-1C6D3664BB21}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoldBadgeChallenge_1_Test", "GoldBadgeChallenge_1\GoldBadgeChallenge_1_Test.csproj", "{126A4BF1-2D4B-40DD-B4E6-DACE3C0BAE02}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge 1 Tests", "GoldBadgeChallenge_1\Challenge 1 Tests.csproj", "{126A4BF1-2D4B-40DD-B4E6-DACE3C0BAE02}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoldBadge_Challenge_1_ClassLibrary", "GoldBadge_Challenge_1_ClassLibrary\GoldBadge_Challenge_1_ClassLibrary.csproj", "{9E6481AB-1C62-4E4A-A08C-33694D16FD32}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge 1 Class Library", "GoldBadge_Challenge_1_ClassLibrary\Challenge 1 Class Library.csproj", "{9E6481AB-1C62-4E4A-A08C-33694D16FD32}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
