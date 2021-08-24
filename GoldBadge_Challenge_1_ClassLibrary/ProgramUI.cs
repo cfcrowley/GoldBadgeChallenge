@@ -27,6 +27,7 @@ namespace GoldBadge_Challenge_1_ClassLibrary
             _ourMenu.AddToList(frenchFries);
 
             Console.WriteLine("Welcome to the McDowell's restaurant... if you're a health inspector.... you have to let me know");
+            Console.ReadLine();
         }
 
         public void Menu()
@@ -44,10 +45,10 @@ namespace GoldBadge_Challenge_1_ClassLibrary
                         break;
                     case "2":
                         SeeOurMenu();
-                        return;
+                        break;
                     case "3":
                         DeleteMenuItem();
-                        return;
+                        break;
                     case "4":
                         keepRunning = false;
                         break;
@@ -87,7 +88,6 @@ namespace GoldBadge_Challenge_1_ClassLibrary
 
         public void SeeOurMenu()
         {
-            Console.Clear();
             List<MenuItem> menuItems = _ourMenu.GetOurMenu();
 
             foreach (MenuItem menuItem in menuItems)
@@ -102,16 +102,30 @@ namespace GoldBadge_Challenge_1_ClassLibrary
 
         private void DeleteMenuItem()
         {
+            Console.Clear();
             Console.WriteLine("Which food has gone bad and needs to be removed?");
             string foodName = Console.ReadLine();
-            if (foodName != null)
+            MenuItem badFood = _ourMenu.GetMenuItemByName(foodName);
+            if (badFood != null)
             {
-                
+                DisplayMenu(badFood);
+                Console.WriteLine("You sure you wanna get rid of that? A local school may buy it. Please type yes or no");
+                string response = Console.ReadLine();
+                if (response == "yes" || response == "y")
+                {
+                    _ourMenu.DeleteOurItems(badFood);
+                    Console.WriteLine("Good call... we've had that since the Reagan administration");
+                }
+                else
+                {
+                    Console.WriteLine("I mean that's just like your opinion, man");
+                }
             }
             else
             {
                 Console.WriteLine("You got rid of that last week, silly");
             }
+            Console.ReadLine();
         }
 
         public void GetMenuItemByName()

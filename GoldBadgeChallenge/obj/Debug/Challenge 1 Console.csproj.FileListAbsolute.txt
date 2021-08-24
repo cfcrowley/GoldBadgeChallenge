@@ -1,0 +1,10 @@
+C:\Users\QuickCaster7\Desktop\100SD\GoldBadgeChallenge\GoldBadgeChallenge\bin\Debug\GoldBadgeChallenge.exe.config
+C:\Users\QuickCaster7\Desktop\100SD\GoldBadgeChallenge\GoldBadgeChallenge\bin\Debug\GoldBadgeChallenge.exe
+C:\Users\QuickCaster7\Desktop\100SD\GoldBadgeChallenge\GoldBadgeChallenge\bin\Debug\GoldBadgeChallenge.pdb
+C:\Users\QuickCaster7\Desktop\100SD\GoldBadgeChallenge\GoldBadgeChallenge\bin\Debug\GoldBadge_Challenge_1_ClassLibrary.dll
+C:\Users\QuickCaster7\Desktop\100SD\GoldBadgeChallenge\GoldBadgeChallenge\bin\Debug\GoldBadge_Challenge_1_ClassLibrary.pdb
+C:\Users\QuickCaster7\Desktop\100SD\GoldBadgeChallenge\GoldBadgeChallenge\obj\Debug\Challenge 1 Console.csproj.AssemblyReference.cache
+C:\Users\QuickCaster7\Desktop\100SD\GoldBadgeChallenge\GoldBadgeChallenge\obj\Debug\Challenge 1 Console.csproj.CoreCompileInputs.cache
+C:\Users\QuickCaster7\Desktop\100SD\GoldBadgeChallenge\GoldBadgeChallenge\obj\Debug\Challenge 1 Console.csproj.CopyComplete
+C:\Users\QuickCaster7\Desktop\100SD\GoldBadgeChallenge\GoldBadgeChallenge\obj\Debug\GoldBadgeChallenge.exe
+C:\Users\QuickCaster7\Desktop\100SD\GoldBadgeChallenge\GoldBadgeChallenge\obj\Debug\GoldBadgeChallenge.pdb

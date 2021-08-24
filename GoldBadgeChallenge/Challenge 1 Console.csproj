@@ -49,5 +49,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GoldBadge_Challenge_1_ClassLibrary\Challenge 1 Class Library.csproj">
+      <Project>{9E6481AB-1C62-4E4A-A08C-33694D16FD32}</Project>
+      <Name>Challenge 1 Class Library</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
