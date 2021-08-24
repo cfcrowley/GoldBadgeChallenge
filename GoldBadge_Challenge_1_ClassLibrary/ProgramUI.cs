@@ -92,8 +92,45 @@ namespace GoldBadge_Challenge_1_ClassLibrary
 
             foreach (MenuItem menuItem in menuItems)
             {
-                DisplayContent(menuItem);
+                DisplayMenu(menuItem);
             }
         }
+        public void DisplayMenu(MenuItem food)
+        {
+            Console.WriteLine($"{food.MealNumber} {food.MealName} {food.Description} {food.Ingreditents} {food.Price}");
+        }
+
+        private void DeleteMenuItem()
+        {
+            Console.WriteLine("Which food has gone bad and needs to be removed?");
+            string foodName = Console.ReadLine();
+            if (foodName != null)
+            {
+                
+            }
+            else
+            {
+                Console.WriteLine("You got rid of that last week, silly");
+            }
+        }
+
+        public void GetMenuItemByName()
+        {
+            Console.Clear();
+            Console.WriteLine("Enter the name of the menu item");
+            string menuItem = Console.ReadLine();
+            MenuItem foodProduct = _ourMenu.GetMenuItemByName(menuItem);
+
+            if(foodProduct == null)
+            {
+                Console.WriteLine("Dude get it together... that was in a dream 3 weeks ago");
+            }
+            else
+            {
+                DisplayMenu(foodProduct);
+            }
+            Console.ReadLine();
+        }
     }
+
 }

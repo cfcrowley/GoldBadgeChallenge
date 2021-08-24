@@ -30,5 +30,17 @@ namespace GoldBadge_Challenge_1_ClassLibrary
         {
             _menuItem.Remove(rancidFood);
         }
+
+        public MenuItem GetMenuItemByName(string mealName)
+        {
+            foreach(MenuItem daFood in _menuItem)
+            {
+                if(daFood.MealName == mealName)
+                {
+                    return daFood;
+                }
+            }
+            return null;
+        }
     }
 }
