@@ -1,0 +1,6 @@
+C:\Users\QuickCaster7\Desktop\100SD\GoldBadgeChallenge\GoldBadge_Challenge_1_ClassLibrary\bin\Debug\GoldBadge_Challenge_1_ClassLibrary.dll
+C:\Users\QuickCaster7\Desktop\100SD\GoldBadgeChallenge\GoldBadge_Challenge_1_ClassLibrary\bin\Debug\GoldBadge_Challenge_1_ClassLibrary.pdb
+C:\Users\QuickCaster7\Desktop\100SD\GoldBadgeChallenge\GoldBadge_Challenge_1_ClassLibrary\obj\Debug\Challenge 1 Class Library.csproj.AssemblyReference.cache
+C:\Users\QuickCaster7\Desktop\100SD\GoldBadgeChallenge\GoldBadge_Challenge_1_ClassLibrary\obj\Debug\Challenge 1 Class Library.csproj.CoreCompileInputs.cache
+C:\Users\QuickCaster7\Desktop\100SD\GoldBadgeChallenge\GoldBadge_Challenge_1_ClassLibrary\obj\Debug\GoldBadge_Challenge_1_ClassLibrary.dll
+C:\Users\QuickCaster7\Desktop\100SD\GoldBadgeChallenge\GoldBadge_Challenge_1_ClassLibrary\obj\Debug\GoldBadge_Challenge_1_ClassLibrary.pdb
