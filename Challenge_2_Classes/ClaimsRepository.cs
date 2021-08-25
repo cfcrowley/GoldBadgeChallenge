@@ -17,16 +17,16 @@ namespace Challenge_2_Classes
         {
             _claims.Add(claim);
         }
+        public List<Claim> GetOurClaims()
+        {
+            return _claims;
+        }
 
         public void DeleteOurItems(Claim badClaim)
         {
             _claims.Remove(badClaim);
         }
-
-        public List<Claim> GetOurClaims()
-        {
-            return _claims;
-        }
+        // didn't use this and directions didn't call for one, but always handy to  have around
 
 
 
