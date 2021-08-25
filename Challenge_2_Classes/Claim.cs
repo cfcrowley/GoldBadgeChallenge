@@ -8,6 +8,15 @@ namespace Challenge_2_Classes
 {
     public class Claim
     {
+        public Claim(int claim, ClaimType claimType, string description, double damageCost, DateTimeOffset dateOfAccident, DateTimeOffset dateOfClaim)
+        {
+            ClaimID = claim;
+            ClaimType = claimType;
+            Description = description;
+            DamageCost = damageCost;
+            DateOfAccident = dateOfAccident;
+            DateOfClaim = dateOfClaim;
+        }
         public int ClaimID { get; set; }
         public ClaimType ClaimType { get; set; }
         public string Description { get; set; }

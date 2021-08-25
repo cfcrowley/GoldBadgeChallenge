@@ -22,18 +22,12 @@ namespace GoldBadgeChallenge_1
         [TestMethod]
         public void AddToMenu_ShouldReturnCorrectDescription()
         {
-            MenuItem chickenFeet = new MenuItem();
+            MenuItem chickenFeet = new MenuItem(2,"TheMcSorry","why would you buy this?", "can't you tell", 600.58m);
             MenuRepository dinnerMenu = new MenuRepository();
-
-            chickenFeet.Description = "why would you buy this?";
-            chickenFeet.Ingreditents = "can't you tell?";
-            chickenFeet.MealName = "The McSorry";
-            chickenFeet.MealNumber = 2;
-            chickenFeet.Price = 600.58m;
             // may not have needed to add all of the info, but you gotta have some fun sometimes
+            dinnerMenu.AddToList(chickenFeet);
             string expected = "why would you buy this?";
             string actual = chickenFeet.Description;
-
             
             Assert.AreEqual(expected, actual);
 

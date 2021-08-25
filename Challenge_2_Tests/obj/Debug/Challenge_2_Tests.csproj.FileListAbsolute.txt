@@ -1,0 +1,16 @@
+C:\Users\QuickCaster7\Desktop\100SD\GoldBadgeChallenge\Challenge_2_Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\QuickCaster7\Desktop\100SD\GoldBadgeChallenge\Challenge_2_Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\QuickCaster7\Desktop\100SD\GoldBadgeChallenge\Challenge_2_Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\QuickCaster7\Desktop\100SD\GoldBadgeChallenge\Challenge_2_Tests\bin\Debug\Challenge_2_Tests.dll
+C:\Users\QuickCaster7\Desktop\100SD\GoldBadgeChallenge\Challenge_2_Tests\bin\Debug\Challenge_2_Tests.pdb
+C:\Users\QuickCaster7\Desktop\100SD\GoldBadgeChallenge\Challenge_2_Tests\bin\Debug\Challenge_2_Classes.dll
+C:\Users\QuickCaster7\Desktop\100SD\GoldBadgeChallenge\Challenge_2_Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\QuickCaster7\Desktop\100SD\GoldBadgeChallenge\Challenge_2_Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\QuickCaster7\Desktop\100SD\GoldBadgeChallenge\Challenge_2_Tests\bin\Debug\Challenge_2_Classes.pdb
+C:\Users\QuickCaster7\Desktop\100SD\GoldBadgeChallenge\Challenge_2_Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\QuickCaster7\Desktop\100SD\GoldBadgeChallenge\Challenge_2_Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\QuickCaster7\Desktop\100SD\GoldBadgeChallenge\Challenge_2_Tests\obj\Debug\Challenge_2_Tests.csproj.AssemblyReference.cache
+C:\Users\QuickCaster7\Desktop\100SD\GoldBadgeChallenge\Challenge_2_Tests\obj\Debug\Challenge_2_Tests.csproj.CoreCompileInputs.cache
+C:\Users\QuickCaster7\Desktop\100SD\GoldBadgeChallenge\Challenge_2_Tests\obj\Debug\Challenge_2_Tests.csproj.CopyComplete
+C:\Users\QuickCaster7\Desktop\100SD\GoldBadgeChallenge\Challenge_2_Tests\obj\Debug\Challenge_2_Tests.dll
+C:\Users\QuickCaster7\Desktop\100SD\GoldBadgeChallenge\Challenge_2_Tests\obj\Debug\Challenge_2_Tests.pdb
