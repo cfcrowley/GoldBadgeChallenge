@@ -1,6 +1,0 @@
-C:\Users\QuickCaster7\Desktop\100SD\GoldBadgeChallenge\Challenge_2_Classes\bin\Debug\Challenge_2_Classes.dll
-C:\Users\QuickCaster7\Desktop\100SD\GoldBadgeChallenge\Challenge_2_Classes\bin\Debug\Challenge_2_Classes.pdb
-C:\Users\QuickCaster7\Desktop\100SD\GoldBadgeChallenge\Challenge_2_Classes\obj\Debug\Challenge_2_Classes.csproj.AssemblyReference.cache
-C:\Users\QuickCaster7\Desktop\100SD\GoldBadgeChallenge\Challenge_2_Classes\obj\Debug\Challenge_2_Classes.csproj.CoreCompileInputs.cache
-C:\Users\QuickCaster7\Desktop\100SD\GoldBadgeChallenge\Challenge_2_Classes\obj\Debug\Challenge_2_Classes.dll
-C:\Users\QuickCaster7\Desktop\100SD\GoldBadgeChallenge\Challenge_2_Classes\obj\Debug\Challenge_2_Classes.pdb
