@@ -8,7 +8,7 @@ namespace Challenge_2_Classes
 {
     public class ClaimsRepository
     {
-        protected readonly List<Claim> _claims = new List<Claim>();
+        private readonly List<Claim> _claims = new List<Claim>();
 
 
 
