@@ -29,7 +29,7 @@ namespace Challenge_2_Classes
         public bool IsValid { get
             {
                 TimeSpan timeFromAccident = DateOfClaim - DateOfAccident;
-                if(timeFromAccident.Days >= 30)
+                if(timeFromAccident.Days <= 30)
                 {
                     return true;
                 }

@@ -42,7 +42,7 @@ namespace Challenge_2_Classes
 
             while (keepRunning)
             {
-                Console.WriteLine("Main Menu\n" + "1. See our Claims\n" + "2. Access the claims Queue" + "3. Add a new Claim\n" + "4. Exit the App");
+                Console.WriteLine("Main Menu\n" + "1. See our Claims\n" + "2. Access the claims Queue\n" + "3. Add a new Claim\n" + "4. Exit the App");
                 string yourInput = Console.ReadLine();
                 switch (yourInput)
                 {
@@ -76,6 +76,7 @@ namespace Challenge_2_Classes
 
         public void SeeOurClaims()
         {
+            Console.Clear();
             List<Claim> claimItems = _ourClaims.GetOurClaims();
 
             foreach (Claim claimItem in claimItems)
@@ -129,10 +130,15 @@ namespace Challenge_2_Classes
             string accidentDate2 = Console.ReadLine();
             DateTime accDate2 = Convert.ToDateTime(accidentDate2);
             claim.DateOfClaim = accDate2;
+
+            _ourClaims.AddToClaims(claim);
+
         }
 
         public void AccessQueue()
         {
+            Console.Clear();
+
             DateTime accident = new DateTime(2018, 4, 25);
             DateTime claimFiled = new DateTime(2018, 4, 27);
             Claim highwayOops = new Claim(1, ClaimType.Car, "Car accident on 465", 400.00, accident, claimFiled);
@@ -155,7 +161,7 @@ namespace Challenge_2_Classes
                 claimsQueue.Enqueue(claim);
             }
 
-            claimsQueue.Peek();
+            Console.WriteLine("the first claim in the queue is : {0}", claimsQueue.Peek());
             Console.WriteLine("Do you want to deal with this claim now(y/n)?");
             string yourInput = Console.ReadLine();
             switch (yourInput)
