@@ -108,7 +108,7 @@ namespace Challenge_2_Classes
             }
 
             Console.WriteLine("1. Car\n" + "2. Home\n" + "3. Theft\n");
-            Console.Write("Calim Tpye (#): ");
+            Console.Write("Claim Tpye (#): ");
             string claimInput = Console.ReadLine();
             int claimType = int.Parse(claimInput);
             claim.ClaimType = (ClaimType)claimType;

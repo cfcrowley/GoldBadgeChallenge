@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Challenge_3_Classes;
 
 namespace Challenge_3_Console
 {
@@ -10,6 +11,9 @@ namespace Challenge_3_Console
     {
         static void Main(string[] args)
         {
+            ProgramUI party = new ProgramUI();
+            party.Run();
+
         }
     }
 }
