@@ -42,5 +42,5 @@ namespace Challenge_2_Classes
 
     }
 
-    public enum ClaimType { Car, Home, Theft }
+    public enum ClaimType { Car = 1, Home, Theft }
 }

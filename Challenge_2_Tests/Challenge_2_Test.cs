@@ -14,13 +14,13 @@ namespace Challenge_2_Tests
         public void Arrange()
         {
             _claimLog = new ClaimsRepository();
-            _sideSwipe = new Claim(1, ClaimType.Car, "someone hit my parked car", 2000, DateTimeOffset.Now, DateTimeOffset.Now);
+            _sideSwipe = new Claim(1, ClaimType.Car, "someone hit my parked car", 2000, DateTime.Now, DateTime.Now);
             _claimLog.AddToClaims(_sideSwipe);
         }
         [TestMethod]
         public void AddToClaims_ShouldAddToList()
         {
-            Claim fenderBender = new Claim(2, ClaimType.Car, "didn't look both ways at the roundabout", 350, DateTimeOffset.Now, DateTimeOffset.Now);
+            Claim fenderBender = new Claim(2, ClaimType.Car, "didn't look both ways at the roundabout", 350, DateTime.Now, DateTime.Now);
             ClaimsRepository claimFarm = new ClaimsRepository();
             claimFarm.AddToClaims(fenderBender);
 
@@ -32,7 +32,7 @@ namespace Challenge_2_Tests
         [TestMethod]
         public void GetOurClaims_ShouldReturnTrue()
         {
-            Claim hugeDent = new Claim(5, ClaimType.Car, "golf ball hit the door and dented it", 500, DateTimeOffset.Now, DateTimeOffset.Now);
+            Claim hugeDent = new Claim(5, ClaimType.Car, "golf ball hit the door and dented it", 500, DateTime.Now, DateTime.Now);
             ClaimsRepository typicalTuesday = new ClaimsRepository();
             typicalTuesday.AddToClaims(hugeDent);
 
@@ -44,7 +44,7 @@ namespace Challenge_2_Tests
         [TestMethod]
         public void DeleteTheItems_ShouldReturnFalse()
         {
-            Claim hugeDent = new Claim(5, ClaimType.Car, "golf ball hit the door and dented it", 500, DateTimeOffset.Now, DateTimeOffset.Now);
+            Claim hugeDent = new Claim(5, ClaimType.Car, "golf ball hit the door and dented it", 500, DateTime.Now, DateTime.Now);
             ClaimsRepository typicalTuesday = new ClaimsRepository();
             typicalTuesday.AddToClaims(hugeDent);
 

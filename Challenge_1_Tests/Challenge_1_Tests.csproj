@@ -56,7 +56,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\GoldBadge_Challenge_1_ClassLibrary\Challenge 1 Class Library.csproj">
+    <ProjectReference Include="..\Challenge_1_Classes\Challenge_1_ClassLibrary.csproj">
       <Project>{9E6481AB-1C62-4E4A-A08C-33694D16FD32}</Project>
       <Name>Challenge 1 Class Library</Name>
     </ProjectReference>
