@@ -8,7 +8,8 @@ namespace Challenge_2_Classes
 {
     public class Claim
     {
-        public Claim(int claim, ClaimType claimType, string description, double damageCost, DateTimeOffset dateOfAccident, DateTimeOffset dateOfClaim)
+        public Claim() { }
+        public Claim(int claim, ClaimType claimType, string description, double damageCost, DateTime dateOfAccident, DateTime dateOfClaim)
         {
             ClaimID = claim;
             ClaimType = claimType;
@@ -21,8 +22,8 @@ namespace Challenge_2_Classes
         public ClaimType ClaimType { get; set; }
         public string Description { get; set; }
         public double DamageCost { get; set; }
-        public DateTimeOffset DateOfAccident { get; set; }
-        public DateTimeOffset DateOfClaim { get; set; }
+        public DateTime DateOfAccident { get; set; }
+        public DateTime DateOfClaim { get; set; }
      
         
         public bool IsValid { get

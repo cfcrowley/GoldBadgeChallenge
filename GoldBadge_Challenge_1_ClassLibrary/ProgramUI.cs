@@ -65,7 +65,15 @@ namespace GoldBadge_Challenge_1_ClassLibrary
             Console.WriteLine("Please assign a Combo number from 5-100");
             string comboNumber = Console.ReadLine();
             int comboNum = int.Parse(comboNumber);
+            if(comboNum > 4)
+            {
+
             item.MealNumber = comboNum;
+            }
+            else
+            {
+                Console.WriteLine("please use a number from 5-100");
+            }
 
 
             Console.WriteLine("Please give the meal a name");
