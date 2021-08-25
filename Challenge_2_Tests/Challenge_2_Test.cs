@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Challenge_2_Classes;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -27,6 +28,32 @@ namespace Challenge_2_Tests
             double actual = fenderBender.DamageCost;
 
             Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void GetOurClaims_ShouldReturnTrue()
+        {
+            Claim hugeDent = new Claim(5, ClaimType.Car, "golf ball hit the door and dented it", 500, DateTimeOffset.Now, DateTimeOffset.Now);
+            ClaimsRepository typicalTuesday = new ClaimsRepository();
+            typicalTuesday.AddToClaims(hugeDent);
+
+
+            List<Claim> hugeDents = typicalTuesday.GetOurClaims();
+            bool weHaveWork = hugeDents.Contains(hugeDent);
+            Assert.IsTrue(weHaveWork);
+        }
+        [TestMethod]
+        public void DeleteTheItems_ShouldReturnFalse()
+        {
+            Claim hugeDent = new Claim(5, ClaimType.Car, "golf ball hit the door and dented it", 500, DateTimeOffset.Now, DateTimeOffset.Now);
+            ClaimsRepository typicalTuesday = new ClaimsRepository();
+            typicalTuesday.AddToClaims(hugeDent);
+
+
+            //
+            typicalTuesday.DeleteOurItems(hugeDent);
+            List<Claim> hugeDents = typicalTuesday.GetOurClaims();
+            bool inOurSystem = hugeDents.Contains(hugeDent);
+            Assert.IsFalse(inOurSystem);
         }
     }
 }

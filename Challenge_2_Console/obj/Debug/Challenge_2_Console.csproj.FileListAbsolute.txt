@@ -1,0 +1,6 @@
+C:\Users\QuickCaster7\Desktop\100SD\GoldBadgeChallenge\Challenge_2_Console\bin\Debug\Challenge_2_Console.exe.config
+C:\Users\QuickCaster7\Desktop\100SD\GoldBadgeChallenge\Challenge_2_Console\bin\Debug\Challenge_2_Console.exe
+C:\Users\QuickCaster7\Desktop\100SD\GoldBadgeChallenge\Challenge_2_Console\bin\Debug\Challenge_2_Console.pdb
+C:\Users\QuickCaster7\Desktop\100SD\GoldBadgeChallenge\Challenge_2_Console\obj\Debug\Challenge_2_Console.csproj.CoreCompileInputs.cache
+C:\Users\QuickCaster7\Desktop\100SD\GoldBadgeChallenge\Challenge_2_Console\obj\Debug\Challenge_2_Console.exe
+C:\Users\QuickCaster7\Desktop\100SD\GoldBadgeChallenge\Challenge_2_Console\obj\Debug\Challenge_2_Console.pdb

@@ -23,5 +23,10 @@ namespace Challenge_2_Classes
             _claims.Remove(badClaim);
         }
 
+        public List<Claim> GetOurClaims()
+        {
+            return _claims;
+        }
+
     }
 }
