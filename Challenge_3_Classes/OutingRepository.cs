@@ -17,7 +17,12 @@ namespace Challenge_3_Classes
 
         public List<Outing> GetAllOutings()
         {
-            return _outing;
+            List<Outing> allOutings = new List<Outing>();
+            foreach(Outing o in _outing)
+            {
+                allOutings.Add(o);
+            }
+            return allOutings;
         }
 
         public Outing GetOutingByEventType(EventType eventType)

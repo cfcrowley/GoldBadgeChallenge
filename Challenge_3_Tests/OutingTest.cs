@@ -45,5 +45,19 @@ namespace Challenge_3_Tests
             bool weHaveIt = workHere.Contains(fieldTrip);
             Assert.IsTrue(weHaveIt);
         }
+
+        [TestMethod]
+        public void UpdateExistingOuting_ShouldUpdate()
+        {
+           DateTime bowling = new DateTime(2019, 3, 21);
+            Outing outing = new Outing(EventType.Bowling, bowling, 500, 4000);
+
+            _parties.UpdateExistingOuting(EventType.Bowling, outing);
+
+            var expected = 500;
+            var actual = _outing.PeopleAttend;
+
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
