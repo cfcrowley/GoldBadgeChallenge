@@ -42,7 +42,7 @@ namespace Challenge_2_Classes
 
             while (keepRunning)
             {
-                Console.WriteLine("Main Menu\n" + "1. See our Claims\n" + "2. Access the claims Queue\n" + "3. Add a new Claim\n" + "4. Exit the App");
+                Console.WriteLine("Main Menu\n" + "1. See our Claims\n" + "2. Access the claims Queue\n" + "3. Add a new Claim\n" + "4. Update Claims\n " +"5.Exit the App");
                 string yourInput = Console.ReadLine();
                 switch (yourInput)
                 {
@@ -68,6 +68,12 @@ namespace Challenge_2_Classes
                     case "four":
                     case "FOUR":
                     case "Four":
+                        UpdateClaims();
+                        break;
+                    case "5":
+                    case "five":
+                    case "FIVE":
+                    case "Five":
                         keepRunning = false;
                         break;
                 }
@@ -135,17 +141,49 @@ namespace Challenge_2_Classes
 
         }
 
+        public void UpdateClaims()
+        {
+            Console.WriteLine("What is the description of the claim?");
+            string description = Console.ReadLine();
+            Claim claim = _ourClaims.GetClaimByDescription(description);
+            Console.WriteLine("What is now the Claim ID?");
+            string id = Console.ReadLine();
+            int theId = Convert.ToInt32(id);
+            claim.ClaimID = theId;
+            Console.WriteLine("1. Car\n" + "2. Home\n" + "3. Theft\n");
+            Console.Write("Claim Tpye now (#): ");
+            string claimInput = Console.ReadLine();
+            int claimType = int.Parse(claimInput);
+            claim.ClaimType = (ClaimType)claimType;
+            Console.WriteLine("How much will it cost to remedy the situation now?");
+            string damageNumber = Console.ReadLine();
+            double actualDamage = Convert.ToDouble(damageNumber);
+            claim.DamageCost = actualDamage;
+            Console.WriteLine("Update the descritpion");
+            claim.Description = Console.ReadLine();
+            Console.WriteLine("When did the incident occur? (please use the YYYY, MM, DD format");
+            string accidentDate = Console.ReadLine();
+            DateTime accDate = Convert.ToDateTime(accidentDate);
+            claim.DateOfAccident = accDate;
+            Console.WriteLine("When was the claim filed? (please use the YYYY, MM, DD format");
+            string accidentDate2 = Console.ReadLine();
+            DateTime accDate2 = Convert.ToDateTime(accidentDate2);
+            claim.DateOfClaim = accDate2;
+
+            _ourClaims.UpdateExistingClaim(claim.Description, claim);
+        }
+
         public void AccessQueue()
         {
             Console.Clear();
-            Queue<Claim> claimQueue = new Queue<Claim>();
             List<Claim> claimItems = _ourClaims.GetAllClaims();
-            foreach (Claim c in claimItems)
+            Queue<Claim> claimQueue = new Queue<Claim>();
+            foreach(Claim c in claimItems)
             {
                 claimQueue.Enqueue(c);
             }
-            Claim claim = claimQueue.Dequeue();
-            Console.WriteLine($"the first claim in the queue is : {claim}");
+            
+            Console.WriteLine("the first claim in the queue is : {0}", claimQueue.Peek());
             Console.WriteLine("Do you want to deal with this claim now(y/n)?");
             string yourInput = Console.ReadLine();
             switch (yourInput)

@@ -20,5 +20,34 @@ namespace Challenge_3_Classes
             return _outing;
         }
 
+        public Outing GetOutingByEventType(EventType eventType)
+        {
+
+            foreach (Outing o in _outing) 
+            {
+                if(o.EventType == eventType)
+                {
+                    return o;
+                }
+            }
+            return null;
+        }
+
+        public bool UpdateExistingOuting(EventType eventType, Outing outing)
+        {
+            Outing partA = GetOutingByEventType(eventType);
+
+            if (partA != null)
+            {
+                partA.EventType = outing.EventType;
+                partA.Date = outing.Date;
+                partA.PeopleAttend = outing.PeopleAttend;
+                partA.CostOfEvent = outing.PeopleAttend;
+
+                return true;
+            }
+
+            return false;
+        }
     }
 }

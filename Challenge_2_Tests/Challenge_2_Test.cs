@@ -37,10 +37,23 @@ namespace Challenge_2_Tests
             typicalTuesday.AddToClaims(hugeDent);
 
 
-            List<Claim> hugeDents = typicalTuesday.GetOurClaims();
+            List<Claim> hugeDents = typicalTuesday.GetAllClaims();
             bool weHaveWork = hugeDents.Contains(hugeDent);
             Assert.IsTrue(weHaveWork);
         }
+        [TestMethod]
+        public void UpdateExistingContent_ShouldUpdate()
+        {
+            Claim newClaim = new Claim(1, ClaimType.Car, "things got worse", 4000, DateTime.Now, DateTime.Now);
+
+            _claimLog.UpdateExistingClaim("someone hit my parked car", newClaim);
+
+            var expected = "things got worse";
+            var actual = _sideSwipe.Description;
+
+            Assert.AreEqual(expected, actual);
+        }
+
         [TestMethod]
         public void DeleteTheItems_ShouldReturnFalse()
         {
@@ -51,7 +64,7 @@ namespace Challenge_2_Tests
 
             //
             typicalTuesday.DeleteOurItems(hugeDent);
-            List<Claim> hugeDents = typicalTuesday.GetOurClaims();
+            List<Claim> hugeDents = typicalTuesday.GetAllClaims();
             bool inOurSystem = hugeDents.Contains(hugeDent);
             Assert.IsFalse(inOurSystem);
         }

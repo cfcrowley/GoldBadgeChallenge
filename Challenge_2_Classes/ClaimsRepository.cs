@@ -31,10 +31,7 @@ namespace Challenge_2_Classes
 
         public Claim GetClaimByDescription(string description)
         {
-            // Loop through the list
-            // If content item has correct title
-            //    return the item
-            // return null
+            
             foreach (Claim c in _claims)
             {
                 if (c.Description == description)
@@ -45,7 +42,7 @@ namespace Challenge_2_Classes
             return null;
         }
 
-        public bool UpdateExistingContent(string originalClaim, Claim claim)
+        public bool UpdateExistingClaim(string originalClaim, Claim claim)
         {
             Claim oldClaim = GetClaimByDescription(originalClaim);
 
@@ -64,12 +61,11 @@ namespace Challenge_2_Classes
             return false;
         }
 
-public void DeleteOurItems(Claim badClaim)
+        public void DeleteOurItems(Claim badClaim)
         {
             _claims.Remove(badClaim);
         }
-        // didn't use this and directions didn't call for one, but always handy to  have around
-
+        
 
 
     }
