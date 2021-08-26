@@ -43,7 +43,7 @@ namespace Challenge_3_Classes
 
             while (keepRunning)
             {
-                Console.WriteLine("Main Menu\n" + "1. See Our Events\n" + "2. Add an Event\n" + "3.Breakdown of Expenditures\n" + "4.Exit\n");
+                Console.WriteLine("Main Menu\n" + "1. See Our Events\n" + "2. Add an Event\n" + "3.Breakdown of Expenditures\n" + "4.Update an Event\n" + "5.Exit\n");
                 string yourInput = Console.ReadLine();
                 switch (yourInput)
                 {
@@ -69,6 +69,12 @@ namespace Challenge_3_Classes
                     case "four":
                     case "FOUR":
                     case "Four":
+                        UpdateAnEvent();
+                        break;
+                    case "5":
+                    case "five":
+                    case "Five":
+                    case "FIVE":
                         keepRunning = false;
                         break;
                 }
@@ -136,6 +142,36 @@ namespace Challenge_3_Classes
             Console.WriteLine($"The cost of the Amusement Park outings is {amuseParty.CostOfEvent}");
             Console.WriteLine($"The cost of the concert {privateConcert.CostOfEvent}");
            
+        }
+
+        public void UpdateAnEvent()
+        {
+            Console.WriteLine("How much did the event cost before that you wish to update?");
+            string moneyPlease = Console.ReadLine();
+            double monies = Convert.ToDouble(moneyPlease);
+            Outing outing = _ourParties.GetOutingByCost(monies);
+            Console.WriteLine("1. Golf\n" + "2.Bowling\n" + "3. AmusementPark\n" + "4.Concert\n");
+            Console.Write("Event Type (#): ");
+            string outingInput = Console.ReadLine();
+            int outingType = int.Parse(outingInput);
+            outing.EventType = (EventType)outingType;
+
+            Console.WriteLine("When was the event? (in YYYY, MM, DD format please)");
+            string partyDate = Console.ReadLine();
+            DateTime partyTime = Convert.ToDateTime(partyDate);
+            outing.Date = partyTime;
+
+            Console.WriteLine("How many people attended?");
+            string partyPeople = Console.ReadLine();
+            double actualPeople = Convert.ToDouble(partyPeople);
+            outing.PeopleAttend = actualPeople;
+
+            Console.WriteLine("How much did we use on this party");
+            string partyCost = Console.ReadLine();
+            double actualCost = Convert.ToDouble(partyCost);
+            outing.CostOfEvent = actualCost;
+
+            _ourParties.UpdateExistingOuting(monies, outing);
         }
 
     }

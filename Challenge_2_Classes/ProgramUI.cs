@@ -82,6 +82,7 @@ namespace Challenge_2_Classes
 
         public void SeeOurClaims()
         {
+            Console.Clear();
             List<Claim> claimItems = _ourClaims.GetAllClaims();
 
             foreach (Claim claimItem in claimItems)
@@ -170,7 +171,7 @@ namespace Challenge_2_Classes
             DateTime accDate2 = Convert.ToDateTime(accidentDate2);
             claim.DateOfClaim = accDate2;
 
-            _ourClaims.UpdateExistingClaim(claim.Description, claim);
+            _ourClaims.UpdateExistingClaim(description, claim);
         }
 
         public void AccessQueue()

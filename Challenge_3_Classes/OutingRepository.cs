@@ -25,12 +25,12 @@ namespace Challenge_3_Classes
             return allOutings;
         }
 
-        public Outing GetOutingByEventType(EventType eventType)
+        public Outing GetOutingByCost(double monies)
         {
 
             foreach (Outing o in _outing) 
             {
-                if(o.EventType == eventType)
+                if(o.CostOfEvent == monies)
                 {
                     return o;
                 }
@@ -38,9 +38,9 @@ namespace Challenge_3_Classes
             return null;
         }
 
-        public bool UpdateExistingOuting(EventType eventType, Outing outing)
+        public bool UpdateExistingOuting(double monies, Outing outing)
         {
-            Outing partA = GetOutingByEventType(eventType);
+            Outing partA = GetOutingByCost(monies);
 
             if (partA != null)
             {

@@ -52,7 +52,7 @@ namespace Challenge_3_Tests
            DateTime bowling = new DateTime(2019, 3, 21);
             Outing outing = new Outing(EventType.Bowling, bowling, 500, 4000);
 
-            _parties.UpdateExistingOuting(EventType.Bowling, outing);
+            _parties.UpdateExistingOuting(150, outing);
 
             var expected = 500;
             var actual = _outing.PeopleAttend;
