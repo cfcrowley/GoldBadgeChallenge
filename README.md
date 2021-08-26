@@ -16,4 +16,4 @@
 
 Some nights, this project had me like:
 
-![Bang Head on Wall!](file:///C:/Users/QuickCaster7/Desktop/100SD/giphy.webp)
+![Bang Head on Wall!](/100SD/giphy.webp)
