@@ -14,7 +14,6 @@ namespace GoldBadge_Challenge_1_ClassLibrary
             SeedContent();
             Menu();
         }
-
         public void SeedContent()
         {
             MenuItem chickenLivers = new MenuItem(1, "Chicken Surprise", "a horrible meal that I wouldn't eat", "Chicken Livers and sadness", 10.50m);
@@ -25,11 +24,9 @@ namespace GoldBadge_Challenge_1_ClassLibrary
             _ourMenu.AddToList(hamburgerPizza);
             _ourMenu.AddToList(tacoSalad);
             _ourMenu.AddToList(frenchFries);
-
             Console.WriteLine("Welcome to the McDowell's restaurant... if you're a health inspector.... you have to let me know");
             Console.ReadLine();
         }
-
         public void Menu()
         {
             Console.Clear();
@@ -74,30 +71,21 @@ namespace GoldBadge_Challenge_1_ClassLibrary
             {
                 Console.WriteLine("please use a number from 5-100");
             }
-
-
             Console.WriteLine("Please give the meal a name");
             item.MealName = Console.ReadLine();
-
             Console.WriteLine("Please describe the new item");
             item.Description = Console.ReadLine();
-
             Console.WriteLine("Please tell us the ingredients");
             item.Ingreditents = Console.ReadLine();
-
             Console.WriteLine("Tell us how much it costs");
             string itemCost = Console.ReadLine();
             var cost = Convert.ToDecimal(itemCost);
             item.Price = cost;
-
-
             _ourMenu.AddToList(item);
         }
-
         public void SeeOurMenu()
         {
             List<MenuItem> menuItems = _ourMenu.GetOurMenu();
-
             foreach (MenuItem menuItem in menuItems)
             {
                 DisplayMenu(menuItem);
@@ -107,7 +95,6 @@ namespace GoldBadge_Challenge_1_ClassLibrary
         {
             Console.WriteLine($"{food.MealNumber} {food.MealName} {food.Description} {food.Ingreditents} {food.Price}");
         }
-
         private void DeleteMenuItem()
         {
             Console.Clear();
@@ -135,7 +122,6 @@ namespace GoldBadge_Challenge_1_ClassLibrary
             }
             Console.ReadLine();
         }
-
         public void GetMenuItemByName()
         {
             Console.Clear();

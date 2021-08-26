@@ -9,7 +9,6 @@ namespace GoldBadge_Challenge_1_ClassLibrary
     public class MenuItem
     {
         public MenuItem() { }
-
         public MenuItem(int mealNumber, string mealName, string description, string ingredients, decimal price)
         {
             MealNumber = mealNumber;
@@ -18,7 +17,6 @@ namespace GoldBadge_Challenge_1_ClassLibrary
             Ingreditents = ingredients;
             Price = price;
         }
-
         public int MealNumber { get; set; }
         public string MealName { get; set; }
         public string Description { get; set; }

@@ -9,18 +9,10 @@ namespace GoldBadge_Challenge_1_ClassLibrary
     public class MenuRepository
     {
         private readonly List<MenuItem> _menuItem = new List<MenuItem>();
-
-
-        
         public void AddToList(MenuItem food)
         {
-    
             _menuItem.Add(food);
-
-            
-
         }
-
         public List<MenuItem> GetOurMenu()
         {
             List<MenuItem> allMenu = new List<MenuItem>();
@@ -30,12 +22,10 @@ namespace GoldBadge_Challenge_1_ClassLibrary
             }
             return allMenu;
         }
-
         public void DeleteOurItems(MenuItem rancidFood)
         {
             _menuItem.Remove(rancidFood);
         }
-
         public MenuItem GetMenuItemByName(string mealName)
         {
             foreach(MenuItem daFood in _menuItem)

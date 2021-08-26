@@ -23,9 +23,7 @@ namespace Challenge_2_Classes
         public string Description { get; set; }
         public double DamageCost { get; set; }
         public DateTime DateOfAccident { get; set; }
-        public DateTime DateOfClaim { get; set; }
-     
-        
+        public DateTime DateOfClaim { get; set; } 
         public bool IsValid { get
             {
                 TimeSpan timeFromAccident = DateOfClaim - DateOfAccident;
@@ -41,6 +39,5 @@ namespace Challenge_2_Classes
         }
 
     }
-
     public enum ClaimType { Car = 1, Home, Theft }
 }

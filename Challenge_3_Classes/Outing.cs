@@ -9,7 +9,6 @@ namespace Challenge_3_Classes
     public class Outing
     {
         public Outing() { }
-
         public Outing(EventType eventType,DateTime date, double people, double eventCost)
         {
             EventType = eventType;
@@ -17,7 +16,6 @@ namespace Challenge_3_Classes
             PeopleAttend = people;
             CostOfEvent = eventCost;
         }
-
         public EventType EventType { get; set; }
         public DateTime Date { get; set; }
         public double PeopleAttend { get; set; }

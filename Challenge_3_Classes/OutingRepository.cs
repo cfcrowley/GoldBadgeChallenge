@@ -9,12 +9,10 @@ namespace Challenge_3_Classes
     public class OutingRepository
     {
         private readonly List<Outing> _outing = new List<Outing>();
-
         public void AddToList(Outing party)
         {
             _outing.Add(party);
         }
-
         public List<Outing> GetAllOutings()
         {
             List<Outing> allOutings = new List<Outing>();
@@ -24,10 +22,8 @@ namespace Challenge_3_Classes
             }
             return allOutings;
         }
-
         public Outing GetOutingByCost(double monies)
         {
-
             foreach (Outing o in _outing) 
             {
                 if(o.CostOfEvent == monies)
@@ -37,21 +33,17 @@ namespace Challenge_3_Classes
             }
             return null;
         }
-
         public bool UpdateExistingOuting(double monies, Outing outing)
         {
             Outing partA = GetOutingByCost(monies);
-
             if (partA != null)
             {
                 partA.EventType = outing.EventType;
                 partA.Date = outing.Date;
                 partA.PeopleAttend = outing.PeopleAttend;
                 partA.CostOfEvent = outing.PeopleAttend;
-
                 return true;
             }
-
             return false;
         }
     }

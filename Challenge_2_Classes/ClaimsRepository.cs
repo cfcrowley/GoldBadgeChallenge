@@ -9,16 +9,10 @@ namespace Challenge_2_Classes
     public class ClaimsRepository
     {
         private readonly List<Claim> _claims = new List<Claim>();
-
-
-
-        //Create
         public void AddToClaims(Claim claim)
         {
             _claims.Add(claim);
         }
-
-        //Read
         public List<Claim> GetAllClaims()
         {
             List<Claim> allClaims = new List<Claim>();
@@ -28,10 +22,8 @@ namespace Challenge_2_Classes
             }
             return allClaims;
         }
-
         public Claim GetClaimByDescription(string description)
         {
-            
             foreach (Claim c in _claims)
             {
                 if (c.Description == description)
@@ -41,11 +33,9 @@ namespace Challenge_2_Classes
             }
             return null;
         }
-
         public bool UpdateExistingClaim(string originalClaim, Claim claim)
         {
             Claim oldClaim = GetClaimByDescription(originalClaim);
-
             if (oldClaim != null)
             {
                 oldClaim.ClaimType = claim.ClaimType;
@@ -54,13 +44,10 @@ namespace Challenge_2_Classes
                 oldClaim.Description = claim.Description;
                 oldClaim.DateOfAccident = claim.DateOfAccident;
                 oldClaim.DateOfClaim = claim.DateOfClaim;
-
                 return true;
             }
-
             return false;
         }
-
         public void DeleteOurItems(Claim badClaim)
         {
             _claims.Remove(badClaim);

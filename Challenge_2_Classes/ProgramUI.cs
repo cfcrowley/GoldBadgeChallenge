@@ -14,7 +14,6 @@ namespace Challenge_2_Classes
             SeedContent();
             Menu();
         }
-
         public void SeedContent()
         {
             DateTime accident = new DateTime(2018, 4, 25);
@@ -26,20 +25,16 @@ namespace Challenge_2_Classes
             DateTime accident3 = new DateTime(2018, 4, 27);
             DateTime claimFiled3 = new DateTime(2018, 6, 01);
             Claim myBreakfast = new Claim(3, ClaimType.Theft, "Stolen pancakes", 4.00, accident3, claimFiled3);
-
             _ourClaims.AddToClaims(highwayOops);
             _ourClaims.AddToClaims(houseOops);
             _ourClaims.AddToClaims(myBreakfast);
-
             Console.WriteLine("Welcome to our integrated insurance system... please tell me this isn't going to be expensive");
             Console.ReadLine();
         }
-
         public void Menu()
         {
             Console.Clear();
             bool keepRunning = true;
-
             while (keepRunning)
             {
                 Console.WriteLine("Main Menu\n" + "1. See our Claims\n" + "2. Access the claims Queue\n" + "3. Add a new Claim\n" + "4. Update Claims\n " +"5.Exit the App");
@@ -79,7 +74,6 @@ namespace Challenge_2_Classes
                 }
             }
         }
-
         public void SeeOurClaims()
         {
             Console.Clear();
@@ -91,17 +85,14 @@ namespace Challenge_2_Classes
             }
 
         }
-
         public void DisplayClaim(Claim claimItem)
         {
             Console.WriteLine($"{claimItem.ClaimID} {claimItem.ClaimType} {claimItem.Description} {claimItem.DamageCost} {claimItem.DateOfAccident} {claimItem.DateOfClaim} {claimItem.IsValid}");
         }
-
         private void AddNewClaim()
         {
             Console.Clear();
             Claim claim = new Claim();
-
             Console.WriteLine("Please assign a claim ID from 4-100");
             string claimNumber = Console.ReadLine();
             int claimNum = int.Parse(claimNumber);
@@ -113,35 +104,27 @@ namespace Challenge_2_Classes
             {
                 Console.WriteLine("Please assign a number from 4-100");
             }
-
             Console.WriteLine("1. Car\n" + "2. Home\n" + "3. Theft\n");
             Console.Write("Claim Tpye (#): ");
             string claimInput = Console.ReadLine();
             int claimType = int.Parse(claimInput);
             claim.ClaimType = (ClaimType)claimType;
-
             Console.WriteLine("Please describe the incident");
             claim.Description = Console.ReadLine();
-
             Console.WriteLine("How much will it cost to remedy the situation?");
             string damageNumber = Console.ReadLine();
             double actualDamage = Convert.ToDouble(damageNumber);
             claim.DamageCost = actualDamage;
-
             Console.WriteLine("When did the incident occur? (please use the YYYY, MM, DD format");
             string accidentDate = Console.ReadLine();
             DateTime accDate = Convert.ToDateTime(accidentDate);
             claim.DateOfAccident = accDate;
-
             Console.WriteLine("When was the claim filed? (please use the YYYY, MM, DD format");
             string accidentDate2 = Console.ReadLine();
             DateTime accDate2 = Convert.ToDateTime(accidentDate2);
             claim.DateOfClaim = accDate2;
-
             _ourClaims.AddToClaims(claim);
-
         }
-
         public void UpdateClaims()
         {
             Console.WriteLine("What is the description of the claim?");
@@ -170,10 +153,8 @@ namespace Challenge_2_Classes
             string accidentDate2 = Console.ReadLine();
             DateTime accDate2 = Convert.ToDateTime(accidentDate2);
             claim.DateOfClaim = accDate2;
-
             _ourClaims.UpdateExistingClaim(description, claim);
         }
-
         public void AccessQueue()
         {
             Console.Clear();
@@ -183,7 +164,6 @@ namespace Challenge_2_Classes
             {
                 claimQueue.Enqueue(c);
             }
-            
             Console.WriteLine("the first claim in the queue is : {0}", claimQueue.Peek());
             Console.WriteLine("Do you want to deal with this claim now(y/n)?");
             string yourInput = Console.ReadLine();
