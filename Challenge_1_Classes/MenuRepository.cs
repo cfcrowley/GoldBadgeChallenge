@@ -23,7 +23,12 @@ namespace GoldBadge_Challenge_1_ClassLibrary
 
         public List<MenuItem> GetOurMenu()
         {
-            return _menuItem;
+            List<MenuItem> allMenu = new List<MenuItem>();
+            foreach(MenuItem m in _menuItem)
+            {
+                allMenu.Add(m);
+            }
+            return allMenu;
         }
 
         public void DeleteOurItems(MenuItem rancidFood)
