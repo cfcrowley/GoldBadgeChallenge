@@ -1,4 +1,4 @@
-# GoldBadgeChallenge by Christopher Crowley
+# Gold Badge Challenge by Christopher Crowley
 ===========================================
 
 **Attempts were made to complete 3 of the 7 prompts!**
@@ -13,6 +13,8 @@
 ============================================
 
 **Not going to lie there were plenty of roadblocks that came down the line from start to finish. I made the mistake of looking at prompt 7 first and psyching myself out. This put me behind where I wanted to be from the get go. I'm happy we did these projects on our own because it really gave us the chance to swim even thought the inital fear is that we'll sink.**
+
+*Don't know if everything is 100% correctly made but I know the barebones are there and correct, now I'm just having fun with my README File*
 
 Some nights, this project had me like:
 
