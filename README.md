@@ -16,4 +16,4 @@
 
 Some nights, this project had me like:
 
-![Bang Head on Wall!](https://giphy.com/embed/h36vh423PiV9K)
+https://giphy.com/embed/h36vh423PiV9K
