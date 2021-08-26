@@ -12,14 +12,21 @@ namespace Challenge_2_Classes
 
 
 
-
+        //Create
         public void AddToClaims(Claim claim)
         {
             _claims.Add(claim);
         }
-        public List<Claim> GetOurClaims()
+
+        //Read
+        public List<Claim> GetAllClaims()
         {
-            return _claims;
+            List<Claim> allClaims = new List<Claim>();
+            foreach(Claim c in _claims)
+            {
+                allClaims.Add(c);
+            }
+            return allClaims;
         }
 
         public void DeleteOurItems(Claim badClaim)

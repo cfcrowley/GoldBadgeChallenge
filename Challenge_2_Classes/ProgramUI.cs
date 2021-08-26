@@ -8,7 +8,7 @@ namespace Challenge_2_Classes
 {
     public class ProgramUI
     {
-        protected readonly ClaimsRepository _ourClaims = new ClaimsRepository();
+        private readonly ClaimsRepository _ourClaims = new ClaimsRepository();
         public void Run()
         {
             SeedContent();
@@ -76,13 +76,13 @@ namespace Challenge_2_Classes
 
         public void SeeOurClaims()
         {
-            Console.Clear();
-            List<Claim> claimItems = _ourClaims.GetOurClaims();
+            List<Claim> claimItems = _ourClaims.GetAllClaims();
 
             foreach (Claim claimItem in claimItems)
             {
                 DisplayClaim(claimItem);
             }
+
         }
 
         public void DisplayClaim(Claim claimItem)
@@ -138,30 +138,14 @@ namespace Challenge_2_Classes
         public void AccessQueue()
         {
             Console.Clear();
-
-            DateTime accident = new DateTime(2018, 4, 25);
-            DateTime claimFiled = new DateTime(2018, 4, 27);
-            Claim highwayOops = new Claim(1, ClaimType.Car, "Car accident on 465", 400.00, accident, claimFiled);
-            DateTime accident2 = new DateTime(2018, 4, 11);
-            DateTime claimFiled2 = new DateTime(2018, 4, 12);
-            Claim houseOops = new Claim(2, ClaimType.Home, "House fire in kitchen", 4000.00, accident2, claimFiled2);
-            DateTime accident3 = new DateTime(2018, 4, 27);
-            DateTime claimFiled3 = new DateTime(2018, 6, 01);
-            Claim myBreakfast = new Claim(3, ClaimType.Theft, "Stolen pancakes", 4.00, accident3, claimFiled3);
-
-            Claim[] claims = new Claim[3];
-            claims[0] = highwayOops;
-            claims[1] = houseOops;
-            claims[2] = myBreakfast;
-
-            Queue<Claim> claimsQueue = new Queue<Claim>();
-
-            foreach(Claim claim in claims)
+            Queue<Claim> claimQueue = new Queue<Claim>();
+            List<Claim> claimItems = _ourClaims.GetAllClaims();
+            foreach (Claim c in claimItems)
             {
-                claimsQueue.Enqueue(claim);
+                claimQueue.Enqueue(c);
             }
-
-            Console.WriteLine("the first claim in the queue is : {0}", claimsQueue.Peek());
+            Claim claim = claimQueue.Dequeue();
+            Console.WriteLine($"the first claim in the queue is : {claim}");
             Console.WriteLine("Do you want to deal with this claim now(y/n)?");
             string yourInput = Console.ReadLine();
             switch (yourInput)
@@ -172,7 +156,7 @@ namespace Challenge_2_Classes
                 case "YES":
                 case "Yes":
                     Console.WriteLine("You've processed the claim");
-                    claimsQueue.Dequeue();
+                    claimQueue.Dequeue();
                     break;
                 case "N":
                 case "n":
